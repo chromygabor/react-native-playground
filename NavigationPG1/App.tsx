@@ -8,12 +8,12 @@
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import 'react-native-gesture-handler';
-import MyStack from './src/MyStack';
+import AppNavigation from './src/MyStack';
 
 function App(): JSX.Element {
   return (
     <NavigationContainer>
-      <MyStack />
+      <AppNavigation />
     </NavigationContainer>
   );
 }
