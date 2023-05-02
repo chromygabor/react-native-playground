@@ -4,7 +4,7 @@ import {View} from 'react-native';
 import {ActivityIndicator} from 'react-native-paper';
 import AppStack from './AppStack';
 import AuthStack from './AuthStack';
-import {useAuthContext} from './context/AuthContext';
+import {useAuthContext} from '../context/AuthContext';
 
 const AppNavigation: React.FC = () => {
   const {isLoading, token, error} = useAuthContext();

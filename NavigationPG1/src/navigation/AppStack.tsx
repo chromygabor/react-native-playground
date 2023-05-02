@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {createStackNavigator} from '@react-navigation/stack';
-import {Routes} from './constants/routes';
-import HomeScreen from './screens/HomeScreen';
+import {Routes} from '../constants/routes';
+import HomeScreen from '../screens/HomeScreen';
+import BottonTabNavigator from './BottonTabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -12,8 +13,8 @@ const AppStack: React.FC<IMyStackProps> = (props: IMyStackProps) => {
     <Stack.Navigator initialRouteName={Routes.LOGIN}>
       <Stack.Screen
         name={Routes.HOME}
-        component={HomeScreen}
-        options={{headerLeft: () => <></>}}
+        component={BottonTabNavigator}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

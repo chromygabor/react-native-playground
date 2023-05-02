@@ -40,11 +40,8 @@ export const AuthProvider = (props: PropsWithChildren<IAuthProvider>) => {
     });
 
     const timeout = Math.random() * 5 * 1000;
-    console.log('Loading for: ', timeout);
     setTimeout(() => {
-      // console.log('Finished');
-
-      if (Math.random() < 0.3) {
+      if (Math.random() < 0.1) {
         setValue({
           isLoading: false,
           error: 'Some random error',
@@ -78,7 +75,6 @@ export const AuthProvider = (props: PropsWithChildren<IAuthProvider>) => {
     }, Math.random() * 5 * 1000);
   };
 
-  console.log({value});
   return (
     <AuthContext.Provider value={{login, logout, ...value}}>
       {props.children}

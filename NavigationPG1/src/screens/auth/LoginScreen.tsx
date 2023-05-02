@@ -3,10 +3,7 @@ import {View} from 'react-native';
 import {Button, Text, TextInput} from 'react-native-paper';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {LoginStyles} from '../../Styles';
-import {useNavigation} from '@react-navigation/native';
-import {Routes} from '../../constants/routes';
 import {useAuthContext} from '../../context/AuthContext';
-import {useContext} from 'react';
 
 export interface ILoginScreenProps {}
 

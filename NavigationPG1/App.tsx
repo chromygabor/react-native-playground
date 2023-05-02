@@ -7,7 +7,7 @@
 
 import React from 'react';
 import 'react-native-gesture-handler';
-import AppNavigation from './src/AppNavigation';
+import AppNavigation from './src/navigation/AppNavigation';
 import {AuthProvider} from './src/context/AuthContext';
 
 function App(): JSX.Element {
