@@ -5,11 +5,13 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {LoginStyles} from '../../Styles';
 import {useNavigation} from '@react-navigation/native';
 import {Routes} from '../../constants/routes';
+import {useAuthContext} from '../../context/AuthContext';
+import {useContext} from 'react';
 
 export interface ILoginScreenProps {}
 
 const LoginScreen: React.FC<ILoginScreenProps> = (props: ILoginScreenProps) => {
-  const navigation = useNavigation();
+  const {login, error} = useAuthContext();
 
   return (
     <SafeAreaView style={LoginStyles.backgroundStyle}>
@@ -19,6 +21,11 @@ const LoginScreen: React.FC<ILoginScreenProps> = (props: ILoginScreenProps) => {
           <View style={LoginStyles.login}>
             <Text variant="headlineLarge">Login</Text>
             <Text variant="titleMedium">Please Sign in to continue</Text>
+            {error && (
+              <Text variant="titleMedium" style={LoginStyles.error}>
+                {error}
+              </Text>
+            )}
           </View>
           <TextInput
             label="Email"
@@ -43,7 +50,7 @@ const LoginScreen: React.FC<ILoginScreenProps> = (props: ILoginScreenProps) => {
           <View style={LoginStyles.buttonContainer}>
             <Button
               mode="contained"
-              onPress={() => navigation.navigate(Routes.HOME)}
+              onPress={() => login({})}
               style={LoginStyles.button}>
               Sign in
             </Button>

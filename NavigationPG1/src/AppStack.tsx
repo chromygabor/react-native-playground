@@ -1,23 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {createStackNavigator} from '@react-navigation/stack';
 import {Routes} from './constants/routes';
-import LoginScreen from './screens/auth/LoginScreen';
 import HomeScreen from './screens/HomeScreen';
-import {useState} from 'react';
 
 const Stack = createStackNavigator();
 
 export interface IMyStackProps {}
 
-const AppNavigation: React.FC<IMyStackProps> = (props: IMyStackProps) => {
-  const [userToken, setUserToken] = useState();
+const AppStack: React.FC<IMyStackProps> = (props: IMyStackProps) => {
   return (
     <Stack.Navigator initialRouteName={Routes.LOGIN}>
-      <Stack.Screen
-        name={Routes.LOGIN}
-        component={LoginScreen}
-        options={{headerShown: false}}
-      />
       <Stack.Screen
         name={Routes.HOME}
         component={HomeScreen}
@@ -26,4 +18,4 @@ const AppNavigation: React.FC<IMyStackProps> = (props: IMyStackProps) => {
     </Stack.Navigator>
   );
 };
-export default AppNavigation;
+export default AppStack;

@@ -50,4 +50,7 @@ export const LoginStyles = StyleSheet.create({
   forgot: {
     alignItems: 'flex-start',
   },
+  error: {
+    color: 'red',
+  },
 });

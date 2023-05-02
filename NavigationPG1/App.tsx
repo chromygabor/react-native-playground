@@ -5,16 +5,16 @@
  * @format
  */
 
-import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import 'react-native-gesture-handler';
-import AppNavigation from './src/MyStack';
+import AppNavigation from './src/AppNavigation';
+import {AuthProvider} from './src/context/AuthContext';
 
 function App(): JSX.Element {
   return (
-    <NavigationContainer>
+    <AuthProvider>
       <AppNavigation />
-    </NavigationContainer>
+    </AuthProvider>
   );
 }
 
