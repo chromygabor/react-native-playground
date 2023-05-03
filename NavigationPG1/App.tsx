@@ -1,14 +1,9 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
+import {StyleSheet} from 'react-native';
 import 'react-native-gesture-handler';
-import AppNavigation from './src/navigation/AppNavigation';
 import {AuthProvider} from './src/context/AuthContext';
+import AppNavigation from './src/navigation/AppNavigation';
 
 function App(): JSX.Element {
   return (
@@ -17,5 +12,10 @@ function App(): JSX.Element {
     </AuthProvider>
   );
 }
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'red',
+  },
+});
 export default App;

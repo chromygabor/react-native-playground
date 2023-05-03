@@ -1,5 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {
+  BottomTabBar,
+  createBottomTabNavigator,
+} from '@react-navigation/bottom-tabs';
 import {Routes} from '../constants/routes';
 import {HomeScreen, ShuffleScreen, FooScreen} from '../screens';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -29,12 +32,17 @@ const Foo2: (route: string) => (params: Params) => JSX.Element = (
   };
 };
 
+const tabBar = (props: any) => {
+  return <BottomTabBar {...props} />;
+};
+
 const BottonTabNavigator: React.FC = () => {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
         headerShown: false,
         tabBarIcon: Foo2(route.name),
+        tabBar: tabBar,
       })}>
       <Tab.Screen name={Routes.HOME_TAB} component={HomeScreen} />
       <Tab.Screen name={Routes.SHUFFLE_TAB} component={ShuffleScreen} />

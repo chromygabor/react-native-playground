@@ -8,7 +8,6 @@ import {useAuthContext} from '../context/AuthContext';
 
 const AppNavigation: React.FC = () => {
   const {isLoading, token, error} = useAuthContext();
-  console.log({token});
 
   if (isLoading) {
     return (
