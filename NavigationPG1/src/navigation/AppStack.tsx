@@ -2,7 +2,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {Routes} from '../constants/routes';
 import HomeScreen from '../screens/HomeScreen';
-import BottonTabNavigator from './BottonTabNavigator';
+import BottomTabNavigator from './BottomTabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -13,7 +13,7 @@ const AppStack: React.FC<IMyStackProps> = (props: IMyStackProps) => {
     <Stack.Navigator initialRouteName={Routes.LOGIN}>
       <Stack.Screen
         name={Routes.HOME}
-        component={BottonTabNavigator}
+        component={BottomTabNavigator}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

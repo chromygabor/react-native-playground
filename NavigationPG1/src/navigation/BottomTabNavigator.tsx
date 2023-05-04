@@ -7,6 +7,8 @@ import {Routes} from '../constants/routes';
 import {HomeScreen, ShuffleScreen, FooScreen} from '../screens';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {ParamListBase, RouteProp} from '@react-navigation/native';
+import {SafeAreaView} from 'react-native';
+import {HomeStyles} from '../Styles';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,7 +18,7 @@ type Params = {
   focused: boolean;
 };
 
-const Foo2: (route: string) => (params: Params) => JSX.Element = (
+const tabBarIcon: (route: string) => (params: Params) => JSX.Element = (
   routeName: string,
 ) => {
   const Icons = {
@@ -33,22 +35,33 @@ const Foo2: (route: string) => (params: Params) => JSX.Element = (
 };
 
 const tabBar = (props: any) => {
-  return <BottomTabBar {...props} />;
+  return <BottomTabBar {...props} style={{}} />;
 };
 
-const BottonTabNavigator: React.FC = () => {
+const BottomTabNavigator: React.FC = () => {
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
         headerShown: false,
-        tabBarIcon: Foo2(route.name),
-        tabBar: tabBar,
+        tabBarIcon: tabBarIcon(route.name),
+        //tabBar: tabBar,
       })}>
-      <Tab.Screen name={Routes.HOME_TAB} component={HomeScreen} />
+      <Tab.Screen
+        name={Routes.HOME_TAB}
+        component={HomeScreen}
+        options={{
+          headerShown: false,
+          tabBarStyle: {
+            backgroundColor: 'red',
+            padding: 0,
+            margin: 0,
+          },
+        }}
+      />
       <Tab.Screen name={Routes.SHUFFLE_TAB} component={ShuffleScreen} />
       <Tab.Screen name={Routes.FOO_TAB} component={FooScreen} />
     </Tab.Navigator>
   );
 };
 
-export default BottonTabNavigator;
+export default BottomTabNavigator;

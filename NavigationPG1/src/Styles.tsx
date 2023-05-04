@@ -3,8 +3,9 @@ import {StyleSheet} from 'react-native';
 export const HomeStyles = StyleSheet.create({
   backgroundStyle: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: 'blue',
+    padding: 0,
+    margin: 0,
   },
 });
 
