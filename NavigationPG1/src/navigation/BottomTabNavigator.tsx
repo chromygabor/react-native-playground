@@ -52,7 +52,6 @@ const BottomTabNavigator: React.FC = () => {
         options={{
           headerShown: false,
           tabBarStyle: {
-            backgroundColor: 'red',
             padding: 0,
             margin: 0,
           },

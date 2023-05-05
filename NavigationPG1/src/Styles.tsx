@@ -1,9 +1,9 @@
 import {StyleSheet} from 'react-native';
 
 export const HomeStyles = StyleSheet.create({
+  container: {},
   backgroundStyle: {
     flex: 1,
-    backgroundColor: 'blue',
     padding: 0,
     margin: 0,
   },
@@ -54,4 +54,12 @@ export const LoginStyles = StyleSheet.create({
   error: {
     color: 'red',
   },
+});
+
+export const ItemStyles = StyleSheet.create({
+  imageStyle: {},
+  viewTextStyle: {
+    position: 'absolute',
+  },
+  textStyle: {},
 });
