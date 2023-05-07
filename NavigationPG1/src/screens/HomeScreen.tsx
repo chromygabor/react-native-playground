@@ -3,6 +3,7 @@ import {HomeStyles} from '../Styles';
 import {
   Dimensions,
   FlatList,
+  Image,
   SafeAreaView,
   ScrollView,
   Text,
@@ -28,13 +29,13 @@ const HomeScreen: React.FC<IHomeProps> = (props: IHomeProps) => {
   // }, []);
 
   return (
-    <SafeAreaView style={HomeStyles.container}>
-      <FlatList
-        data={Data}
-        renderItem={({item}) => <Item item={item} width={screenWidth} />}
-        keyExtractor={item => item.id}
-      />
-    </SafeAreaView>
+    <>
+      <ScrollView style={{padding: 10}}>
+        {Data.map(item => {
+          return <Item key={item.id} item={item} />;
+        })}
+      </ScrollView>
+    </>
   );
 };
 

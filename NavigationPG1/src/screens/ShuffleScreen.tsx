@@ -7,11 +7,11 @@ export interface IShuffleProps {}
 
 const ShuffleScreen: React.FC<IShuffleProps> = (props: IShuffleProps) => {
   return (
-    <SafeAreaView style={HomeStyles.backgroundStyle}>
-      <View>
-        <Text>Shuffle</Text>
-      </View>
-    </SafeAreaView>
+    <View>
+      <View style={{backroundColor: '#A020F0', flex: 1}} />
+
+      <View style={{backgroundColor: '#7cb48f', flex: 3}} />
+    </View>
   );
 };
 

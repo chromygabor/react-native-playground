@@ -1,8 +1,17 @@
-import {StyleSheet, Text, TextStyle, View} from 'react-native';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import {
+  ImageBackground,
+  LayoutChangeEvent,
+  StyleSheet,
+  Text,
+  TextStyle,
+  View,
+} from 'react-native';
 import Image from 'react-native-scalable-image';
 import TypeWriter from 'react-native-typewriter';
 import {ItemStyles} from '../Styles';
 import {Avatar} from 'react-native-paper';
+import {useState} from 'react';
 
 export type ItemData = {
   id: string;
@@ -21,66 +30,72 @@ export type ItemData = {
 
 type ItemProps = {
   item: ItemData;
-  width: number;
-};
-
-const containerPadding = {
-  paddingTop: 10,
-  paddingLeft: 20,
-  paddingBottom: 10,
-  paddingRight: 20,
 };
 
 const Item: React.FC<ItemProps> = (props: ItemProps) => {
   const {item} = props;
 
-  const ratio = props.width / item.image.width;
+  const [dimensions, setDimensions] = useState<
+    [number, number, number, number, number | undefined]
+  >([]);
 
-  const [width, height, left, top, fontSize] = [
-    item.image.width * ratio -
-      containerPadding.paddingLeft -
-      containerPadding.paddingRight,
-    item.image.height * ratio -
-      containerPadding.paddingTop -
-      containerPadding.paddingBottom,
-    item.label.left * ratio,
-    item.label.top * ratio,
-    item.label.style.fontSize
-      ? Math.ceil(item.label.style.fontSize * ratio)
-      : undefined,
-  ];
-
-  console.log({
-    ratio,
-    width,
-    height,
-    left,
-    top,
-    style: {...item.label.style, fontSize},
-  });
+  const onLayout = (event: LayoutChangeEvent) => {
+    const {width: viewWidth} = event.nativeEvent.layout;
+    const ratio = viewWidth / item.image.width;
+    const [width, height, left, top, fontSize] = [
+      item.image.width * ratio,
+      item.image.height * ratio,
+      item.label.left * ratio,
+      item.label.top * ratio,
+      item.label.style.fontSize
+        ? Math.ceil(item.label.style.fontSize * ratio)
+        : undefined,
+    ];
+    setDimensions([width, height, top, left, fontSize]);
+  };
 
   return (
-    <View style={{...containerPadding}}>
-      <View style={styles.itemHeader}>
-        <Avatar.Text size={36} label="CG" />
-        <View style={styles.itemHeaderTextContainer}>
-          <Text style={styles.itemHeaderTextPrimary}>Chromy Gábor</Text>
-          <Text style={styles.itemHeaderTextSecondary}>2 perccel ezelőtt</Text>
+    <>
+      <View
+        style={{
+          flex: 1,
+          flexDirection: 'column',
+          marginVertical: 20,
+        }}>
+        <View style={styles.itemHeader}>
+          <Avatar.Text size={36} label="CG" />
+          <View style={styles.itemHeaderTextContainer}>
+            <Text style={styles.itemHeaderTextPrimary}>Chromy Gábor</Text>
+            <Text style={styles.itemHeaderTextSecondary}>
+              2 perccel ezelőtt
+            </Text>
+          </View>
+        </View>
+
+        <View onLayout={onLayout}>
+          <ImageBackground
+            source={{uri: item.image.url}}
+            style={{width: dimensions[0], height: dimensions[1]}}>
+            <View
+              style={{
+                width: dimensions[0],
+                height: dimensions[1],
+              }}>
+              <TypeWriter
+                style={{
+                  ...item.label.style,
+                  fontSize: dimensions[4],
+                  top: dimensions[2],
+                  left: dimensions[3],
+                }}
+                typing={1}>
+                {item.label.text}
+              </TypeWriter>
+            </View>
+          </ImageBackground>
         </View>
       </View>
-      <View style={styles.imageContainer}>
-        <Image
-          source={{uri: item.image.url}}
-          width={width}
-          style={ItemStyles.imageStyle}
-        />
-        <View style={{...ItemStyles.viewTextStyle, top, left}}>
-          <TypeWriter style={{...item.label.style, fontSize}} typing={1}>
-            {item.label.text}
-          </TypeWriter>
-        </View>
-      </View>
-    </View>
+    </>
   );
 };
 

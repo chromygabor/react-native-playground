@@ -14,8 +14,9 @@ function App(): JSX.Element {
 }
 const styles = StyleSheet.create({
   container: {
+    flexDirection: 'row',
     flex: 1,
-    backgroundColor: 'red',
+    padding: 20,
   },
 });
 export default App;
