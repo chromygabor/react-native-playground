@@ -1,6 +1,6 @@
-import {ItemData} from './src/components/Item';
+import {ItemData} from './src/components/AffirmationListItem';
 
-export const Data: ItemData[] = [
+export const Affirmations: ItemData[] = [
   {
     id: '1',
     image: {
@@ -10,8 +10,8 @@ export const Data: ItemData[] = [
     },
     label: {
       text: 'Life loves me!',
-      left: 1100,
-      top: 3000,
+      left: 26,
+      top: 45,
       style: {
         fontFamily: 'CaveatBrush-Regular',
         fontSize: 450,

@@ -5903,6 +5903,11 @@ react-native-codegen@^0.71.5:
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
 
+react-native-fullscreen-chz@^4.0.13:
+  version "4.0.13"
+  resolved "https://registry.yarnpkg.com/react-native-fullscreen-chz/-/react-native-fullscreen-chz-4.0.13.tgz#d40a724614c7602d0cb4b45841ce6eb4cefbe39c"
+  integrity sha512-uMskQa/1qZ7IcuZEhLSrHZPKHe+rN9yMbD8qxaqPwfWDrb06wUdSx2RXnxgG0g6U43c0nAVpArkyNurKRHvhjw==
+
 react-native-gesture-handler@^2.9.0:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.9.0.tgz#2f63812e523c646f25b9ad660fc6f75948e51241"

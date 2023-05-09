@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {Routes} from '../constants/routes';
 import HomeScreen from '../screens/HomeScreen';
 import BottomTabNavigator from './BottomTabNavigator';
+import AffirmationFullScreen from '../screens/AffirmationFullScreen';
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,11 @@ const AppStack: React.FC<IMyStackProps> = (props: IMyStackProps) => {
       <Stack.Screen
         name={Routes.HOME}
         component={BottomTabNavigator}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={Routes.ITEMFULLSCREEN}
+        component={AffirmationFullScreen}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
