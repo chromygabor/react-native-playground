@@ -5,11 +5,11 @@ import {
   View,
 } from 'react-native';
 import TypeWriter from 'react-native-typewriter';
-import {ItemData} from './AffirmationListItem';
+import {AffirmationData} from '../models';
 
 export interface IAffirmationProps {
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
-  item: ItemData;
+  item: AffirmationData;
   ratio: number;
 }
 
