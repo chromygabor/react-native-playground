@@ -1,25 +1,48 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import {ScrollView} from 'react-native';
-import {Affirmations} from '../../Data';
+import {FlatList, ScrollView, Text} from 'react-native';
+import {ActivityIndicator, Button} from 'react-native-paper';
 import AffirmationListItem from './AffirmationListItem';
-import {FeedID, useAffirmationsContext} from '../context/AffirmationRepository';
+import {useAffirmationsData} from '../hooks/useAffirmationsData';
 
 export interface AffirmationListProps {}
 
 const AffirmationList: React.FC<AffirmationListProps> = (
   _props: AffirmationListProps,
 ) => {
-  const repository = useAffirmationsContext().of(FeedID);
+  const {
+    data,
+    isLoading,
+    isFetching,
+    isError,
+    error,
+    hasNextPage,
+    isFetchingNextPage,
+    fetchNextPage,
+  } = useAffirmationsData();
 
-  const {data, isLoading, isFetching, isError, error} = useQuery();
+  if (isLoading) {
+    return <ActivityIndicator />;
+  }
+
+  if (isError) {
+    return <Text>Something went wrong: {error.message}</Text>;
+  }
 
   return (
     <>
-      <ScrollView style={{padding: 10}}>
-        {Affirmations.map(item => {
+      <FlatList
+        style={{padding: 10}}
+        data={data?.pages.flat()}
+        renderItem={({item}) => {
           return <AffirmationListItem key={item.id} item={item} />;
-        })}
-      </ScrollView>
+        }}
+      />
+      {/* {data?.map(item => {
+          return <AffirmationListItem key={item.id} item={item} />;
+        })} */}
+      <Button onPress={() => fetchNextPage()} disabled={!hasNextPage}>
+        Fetch more
+      </Button>
     </>
   );
 };

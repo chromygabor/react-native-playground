@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import TypeWriter from 'react-native-typewriter';
 import {AffirmationData} from '../models';
+import env from '../envs';
 
 export interface IAffirmationProps {
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
@@ -28,7 +29,9 @@ const Affirmation: React.FC<IAffirmationProps> = ({
 
   return (
     <TouchableOpacity onPress={onPress}>
-      <ImageBackground source={{uri: item.image.url}} style={{width, height}}>
+      <ImageBackground
+        source={{uri: env.PUBLIC_ENDPOINT + item.image.url}}
+        style={{width, height}}>
         <View
           style={{
             width,

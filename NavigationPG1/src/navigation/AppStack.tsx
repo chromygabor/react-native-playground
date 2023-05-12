@@ -1,20 +1,25 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {createStackNavigator} from '@react-navigation/stack';
-import {Routes} from '../constants/routes';
-import HomeScreen from '../screens/HomeScreen';
-import BottomTabNavigator from './BottomTabNavigator';
-import AffirmationFullScreen from '../screens/AffirmationFullScreen';
 import {QueryClient, QueryClientProvider} from 'react-query';
+import {Routes} from '../constants/routes';
+import AffirmationFullScreen from '../screens/AffirmationFullScreen';
+import BottomTabNavigator from './BottomTabNavigator';
 
 const Stack = createStackNavigator();
 
-const client = new QueryClient();
+const queryClient = new QueryClient();
+
+if (__DEV__) {
+  import('react-query-native-devtools').then(({addPlugin}) => {
+    addPlugin({queryClient});
+  });
+}
 
 export interface IMyStackProps {}
 
 const AppStack: React.FC<IMyStackProps> = (props: IMyStackProps) => {
   return (
-    <QueryClientProvider client={client}>
+    <QueryClientProvider client={queryClient}>
       <Stack.Navigator initialRouteName={Routes.LOGIN}>
         <Stack.Screen
           name={Routes.HOME}
