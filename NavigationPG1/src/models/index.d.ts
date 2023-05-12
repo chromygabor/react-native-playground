@@ -1,5 +1,5 @@
 export type AffirmationData = {
-  id: string;
+  id: number;
   label: {
     text: string;
     left: number;

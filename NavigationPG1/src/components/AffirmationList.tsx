@@ -33,16 +33,13 @@ const AffirmationList: React.FC<AffirmationListProps> = (
       <FlatList
         style={{padding: 10}}
         data={data?.pages.flat()}
-        renderItem={({item}) => {
+        renderItem={({item, index}) => {
           return <AffirmationListItem key={item.id} item={item} />;
         }}
+        keyExtractor={item => '' + item.id}
+        onEndReached={() => fetchNextPage()}
+        onEndReachedThreshold={0.5}
       />
-      {/* {data?.map(item => {
-          return <AffirmationListItem key={item.id} item={item} />;
-        })} */}
-      <Button onPress={() => fetchNextPage()} disabled={!hasNextPage}>
-        Fetch more
-      </Button>
     </>
   );
 };

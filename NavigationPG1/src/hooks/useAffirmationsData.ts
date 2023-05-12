@@ -3,6 +3,8 @@ import {QueryFunctionContext, useInfiniteQuery, useQuery} from 'react-query';
 import env from '../envs';
 import {AffirmationData} from '../models';
 
+const CACHE_KEY = 'affirmations';
+
 const fetchAffirmations: (
   ops: QueryFunctionContext<string[], any>,
 ) => Promise<AffirmationData[]> = async ({pageParam = 1}) => {
@@ -20,10 +22,11 @@ const fetchAffirmations: (
   ).json();
 };
 
-export const useAffirmationsData = () =>
-  useInfiniteQuery(['affirmations'], fetchAffirmations, {
+export const useAffirmationsData = () => {
+  return useInfiniteQuery([CACHE_KEY], fetchAffirmations, {
     getNextPageParam: (lastPage, pages) => {
       const res = pages.length < 4 ? pages.length + 1 : undefined;
       return res;
     },
   });
+};
