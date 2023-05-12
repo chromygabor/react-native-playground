@@ -7,6 +7,6 @@
     "json-server": "^0.17.3"
   },
   "scripts": {
-    "start": "json-server --watch ./db/db.json --port 4001 --host 192.168.31.177"
+    "start": "json-server --watch ./db/db.json --port 4001 --host 0.0.0.0"
   }
 }
