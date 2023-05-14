@@ -4,6 +4,7 @@ import {QueryClient, QueryClientProvider} from 'react-query';
 import {Routes} from '../constants/routes';
 import AffirmationFullScreen from '../screens/AffirmationFullScreen';
 import BottomTabNavigator from './BottomTabNavigator';
+import AffirmationFullScreenCarousel from '../screens/AffirmationFullScreenCarousel';
 
 const Stack = createStackNavigator();
 
@@ -28,7 +29,7 @@ const AppStack: React.FC<IMyStackProps> = (props: IMyStackProps) => {
         />
         <Stack.Screen
           name={Routes.ITEMFULLSCREEN}
-          component={AffirmationFullScreen}
+          component={AffirmationFullScreenCarousel}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

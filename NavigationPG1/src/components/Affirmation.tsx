@@ -27,30 +27,34 @@ const Affirmation: React.FC<IAffirmationProps> = ({
       : undefined,
   ];
 
-  return (
-    <TouchableOpacity onPress={onPress}>
-      <ImageBackground
-        source={{uri: env.PUBLIC_ENDPOINT + item.image.url}}
-        style={{width, height}}>
-        <View
+  const content = (
+    <ImageBackground
+      source={{uri: env.PUBLIC_ENDPOINT + item.image.url}}
+      style={{width, height}}>
+      <View
+        style={{
+          width,
+          height,
+        }}>
+        <TypeWriter
           style={{
-            width,
-            height,
-          }}>
-          <TypeWriter
-            style={{
-              ...item.label.style,
-              fontSize,
-              top: item.label.top + '%',
-              left: item.label.left + '%',
-            }}
-            typing={1}>
-            {item.label.text}
-          </TypeWriter>
-        </View>
-      </ImageBackground>
-    </TouchableOpacity>
+            ...item.label.style,
+            fontSize,
+            top: item.label.top + '%',
+            left: item.label.left + '%',
+          }}
+          typing={1}>
+          {item.label.text}
+        </TypeWriter>
+      </View>
+    </ImageBackground>
   );
+
+  if (onPress) {
+    return <TouchableOpacity onPress={onPress}>{content}</TouchableOpacity>;
+  } else {
+    return content;
+  }
 };
 
 export default Affirmation;
