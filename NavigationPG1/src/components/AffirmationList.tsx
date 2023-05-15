@@ -18,7 +18,7 @@ const AffirmationList: React.FC<AffirmationListProps> = (
     hasNextPage,
     isFetchingNextPage,
     fetchNextPage,
-  } = useAffirmationsData();
+  } = useAffirmationsData({});
 
   if (isLoading) {
     return <ActivityIndicator />;
@@ -32,11 +32,17 @@ const AffirmationList: React.FC<AffirmationListProps> = (
     <>
       <FlatList
         style={{padding: 10}}
-        data={data?.pages.flat()}
-        renderItem={({item, index}) => {
-          return <AffirmationListItem key={item.id} item={item} />;
+        data={data?.pages}
+        renderItem={({item: queryResult, index}) => {
+          // return <AffirmationListItem key={item.id} item={item} />;
+          return (
+            <>
+              {queryResult.result.map(item => {
+                return <AffirmationListItem key={item.id} item={item} />;
+              })}
+            </>
+          );
         }}
-        keyExtractor={item => '' + item.id}
         onEndReached={() => fetchNextPage()}
         onEndReachedThreshold={0.5}
       />

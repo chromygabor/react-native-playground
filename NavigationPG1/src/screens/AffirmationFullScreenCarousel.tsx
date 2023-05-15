@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {useRoute} from '@react-navigation/native';
-import {useState} from 'react';
+import {useRef, useState} from 'react';
 import {
   ActivityIndicator,
   Animated,
@@ -34,8 +34,6 @@ const AffirmationFullScreen: React.FC<
 
   const [fullscreen, setFullscreen] = useState<boolean>(true);
 
-  const scrollX = new Animated.Value(0);
-
   // useEffect(() => {
   //   if (fullscreen) {
   //     console.log('Setting to fullscreen');
@@ -62,6 +60,8 @@ const AffirmationFullScreen: React.FC<
     fetchNextPage,
   } = useAffirmationsData();
 
+  const scrollX = useRef(new Animated.Value(0)).current;
+
   if (isLoading) {
     return <ActivityIndicator />;
   }
@@ -72,14 +72,14 @@ const AffirmationFullScreen: React.FC<
 
   return (
     <View>
-      <FlatList
+      <Animated.FlatList
         data={data2}
         keyExtractor={(item, index) => 'key' + index}
         horizontal
         pagingEnabled
         scrollEnabled
         snapToAlignment="center"
-        scrollEventThrottle={16}
+        scrollEventThrottle={32}
         decelerationRate={'fast'}
         showsHorizontalScrollIndicator={false}
         renderItem={({item}) => {
@@ -98,9 +98,10 @@ const AffirmationFullScreen: React.FC<
             </View>
           );
         }}
-        onScroll={Animated.event([
-          {nativeEvent: {contentOffset: {x: scrollX}}},
-        ])}
+        onScroll={Animated.event(
+          [{nativeEvent: {contentOffset: {x: scrollX}}}],
+          {useNativeDriver: true},
+        )}
       />
     </View>
   );

@@ -1,0 +1,519 @@
+{
+  "affirmations": [
+    {
+      "id": 0,
+      "label": {
+        "text": "I now go beyond other people’s fears and limitations.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-2562560.jpg",
+        "width": 3024,
+        "height": 4032
+      }
+    },
+    {
+      "id": 1,
+      "label": {
+        "text": "I forgive myself and set myself free.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-4944122.jpg",
+        "width": 3744,
+        "height": 5616
+      }
+    },
+    {
+      "id": 2,
+      "label": {
+        "text": "In the infinity of life where I am, all is perfect, whole, and complete.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-3822583.jpg",
+        "width": 3744,
+        "height": 5617
+      }
+    },
+    {
+      "id": 3,
+      "label": {
+        "text": "Out of this situation only good will come.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-1463563.jpg",
+        "width": 3648,
+        "height": 5472
+      }
+    },
+    {
+      "id": 4,
+      "label": {
+        "text": "I am loved, and I am at peace.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-3693901.jpg",
+        "width": 4000,
+        "height": 6000
+      }
+    },
+    {
+      "id": 5,
+      "label": {
+        "text": "Life loves me!",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-2562560.jpg",
+        "width": 3024,
+        "height": 4032
+      }
+    },
+    {
+      "id": 6,
+      "label": {
+        "text": "Wellness is the natural state of my body. I am in perfect health.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-3060201.jpg",
+        "width": 4000,
+        "height": 6000
+      }
+    },
+    {
+      "id": 7,
+      "label": {
+        "text": "I cross all bridges with joy and ease.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-2917382.jpg",
+        "width": 3648,
+        "height": 5472
+      }
+    },
+    {
+      "id": 8,
+      "label": {
+        "text": "I return to the basics of life: forgiveness, courage, gratitude, love, and humor.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-6962611.jpg",
+        "width": 4480,
+        "height": 6720
+      }
+    },
+    {
+      "id": 9,
+      "label": {
+        "text": "I return to the basics of life: forgiveness, courage, gratitude, love, and humor.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-3872258.jpg",
+        "width": 2000,
+        "height": 3000
+      }
+    },
+    {
+      "id": 10,
+      "label": {
+        "text": "Every thought I think is creating my future.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-3060201.jpg",
+        "width": 4000,
+        "height": 6000
+      }
+    },
+    {
+      "id": 11,
+      "label": {
+        "text": "I am very thankful for all the love in my life. I find it everywhere.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-414262.jpg",
+        "width": 2848,
+        "height": 4165
+      }
+    },
+    {
+      "id": 12,
+      "label": {
+        "text": "I attract only healthy relationships. I am always treated well.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-2562560.jpg",
+        "width": 3024,
+        "height": 4032
+      }
+    },
+    {
+      "id": 13,
+      "label": {
+        "text": "Everything is working out for my highest good.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-5760893.jpg",
+        "width": 4026,
+        "height": 6037
+      }
+    },
+    {
+      "id": 14,
+      "label": {
+        "text": "I am in the process of positive change.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-4099235.jpg",
+        "width": 2624,
+        "height": 3936
+      }
+    },
+    {
+      "id": 15,
+      "label": {
+        "text": "Though these times are difficult, they are only a short phase of life.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-2917382.jpg",
+        "width": 3648,
+        "height": 5472
+      }
+    },
+    {
+      "id": 16,
+      "label": {
+        "text": "Though these times are difficult, they are only a short phase of life.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-6383228.jpg",
+        "width": 4000,
+        "height": 6000
+      }
+    },
+    {
+      "id": 17,
+      "label": {
+        "text": "I trust my intuition. I am willing to listen to that still, small voice within.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-6707078.jpg",
+        "width": 4000,
+        "height": 6000
+      }
+    },
+    {
+      "id": 18,
+      "label": {
+        "text": "Though these times are difficult, they are only a short phase of life.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-2917382.jpg",
+        "width": 3648,
+        "height": 5472
+      }
+    },
+    {
+      "id": 19,
+      "label": {
+        "text": "Every day I make the time to work on all of my goals equally.",
+        "left": 0,
+        "top": 30,
+        "style": {
+          "fontFamily": "Montserrat, Medium Italic",
+          "fontSize": 450,
+          "color": "white",
+          "textShadowColor": "black",
+          "textShadowOffset": {"width": 1, "height": 1},
+          "textShadowRadius": 20
+        }
+      },
+      "image": {
+        "url": "/assets/pexels-photo-3851893.jpg",
+        "width": 4000,
+        "height": 6000
+      }
+    }
+  ],
+  "affirmationImages": [
+    {"url": "pexels-photo-1435735.jpg", "width": 3136, "height": 4704},
+    {"url": "pexels-photo-2719500.jpg", "width": 3648, "height": 5472},
+    {"url": "pexels-photo-3822583.jpg", "width": 3744, "height": 5617},
+    {"url": "pexels-photo-4099235.jpg", "width": 2624, "height": 3936},
+    {"url": "pexels-photo-1463563.jpg", "width": 3648, "height": 5472},
+    {"url": "pexels-photo-2917382.jpg", "width": 3648, "height": 5472},
+    {"url": "pexels-photo-6707078.jpg", "width": 4000, "height": 6000},
+    {"url": "pexels-photo-1930364.jpg", "width": 3648, "height": 5472},
+    {"url": "pexels-photo-3060201.jpg", "width": 4000, "height": 6000},
+    {"url": "pexels-photo-3872258.jpg", "width": 2000, "height": 3000},
+    {"url": "pexels-photo-5368931.jpg", "width": 2624, "height": 3936},
+    {"url": "pexels-photo-2280620.jpg", "width": 3000, "height": 4200},
+    {"url": "pexels-photo-3692609.jpg", "width": 4000, "height": 6000},
+    {"url": "pexels-photo-5384576.jpg", "width": 4480, "height": 6720},
+    {"url": "pexels-photo-8935911.jpg", "width": 4000, "height": 6000},
+    {"url": "pexels-photo-3693901.jpg", "width": 4000, "height": 6000},
+    {"url": "pexels-photo-3927385.jpg", "width": 4000, "height": 6000},
+    {"url": "pexels-photo-414262.jpg", "width": 2848, "height": 4165},
+    {"url": "pexels-photo-6383228.jpg", "width": 4000, "height": 6000},
+    {"url": "pexels-photo-3851893.jpg", "width": 4000, "height": 6000},
+    {"url": "pexels-photo-4944122.jpg", "width": 3744, "height": 5616},
+    {"url": "pexels-photo-6962611.jpg", "width": 4480, "height": 6720},
+    {"url": "pexels-photo-3876440.jpg", "width": 2832, "height": 4242},
+    {"url": "pexels-photo-2562560.jpg", "width": 3024, "height": 4032},
+    {"url": "pexels-photo-5760893.jpg", "width": 4026, "height": 6037}
+  ],
+  "affirmationLabels": [
+    "Life loves me!",
+    "All that I seek is already within me.",
+    "Everything will work out for me.",
+    "I am loved, and I am at peace.",
+    "The tools I need to succeed are in my possession.",
+    "Everything is working out for my highest good.",
+    "Out of this situation only good will come.",
+    "As I say yes to life, life says yes to me.",
+    "All areas of my life are harmonious and balanced.",
+    "Every day I make the time to work on all of my goals equally.",
+    "Every day I achieve greater balance between my thoughts and my actions.",
+    "Every area of my life is in perfect balance.",
+    "All my life goals are in perfect balance.",
+    "All aspects of my life are in perfect alignment.",
+    "Every thought I think is creating my future.",
+    "I am in the process of positive change.",
+    "I now choose go release all hurt and resentment.",
+    "It is safe to look within.",
+    "I forgive myself and set myself free.",
+    "As I say yes to life, life says yes to me.",
+    "I now go beyond other people’s fears and limitations.",
+    "I am Divinely guided and protected at all times.",
+    "I claim my power and move beyond all limitations.",
+    "I trust the process of life.",
+    "I possess the qualities needed to be extremely successful.",
+    "I am deeply fulfilled by all that I do.",
+    "I prosper wherever I turn.",
+    "As I forgive myself, it becomes easier to forgive others.",
+    "I am willing to let go.",
+    "Deep at the center of my being is an infinite well of love.",
+    "Only good can come to me.",
+    "I welcome miracles into my life.",
+    "Whatever I need to know is revealed to me at exactly the right time.",
+    "My happy thoughts help create my healthy body.",
+    "Life supports me in every possible way.",
+    "My day begins and ends with gratitude.",
+    "I listen with love to my body’s messages.",
+    "The past is over.",
+    "I am healthy, whole, and complete.",
+    "Everyone I encounter today has my best interests at heart.",
+    "Though these times are difficult, they are only a short phase of life.",
+    "My future is an ideal projection of what I envision now.",
+    "Filling my mind with pleasant thoughts is the quickest road to health.",
+    "Wellness is the natural state of my body. I am in perfect health.",
+    "I am very thankful for all the love in my life. I find it everywhere.",
+    "I know that old, negative patterns no longer limit me. I let them go with ease.",
+    "In the infinity of life where I am, all is perfect, whole, and complete.",
+    "I trust my intuition. I am willing to listen to that still, small voice within.",
+    "I am willing to ask for help when I need it.",
+    "I forgive myself for not being perfect.",
+    "I honor who I am.",
+    "I attract only healthy relationships. I am always treated well.",
+    "I do not have to prove myself to anyone.",
+    "I come from the loving space of my heart, and I know that love opens all doors.",
+    "Today, no person, place, or thing can irritate or annoy me. I choose to be at peace.",
+    "I am safe in the Universe and All Life loves and supports me.",
+    "I cross all bridges with joy and ease.",
+    "Loving others is easy when I love and accept myself.",
+    "I return to the basics of life: forgiveness, courage, gratitude, love, and humor.",
+    "I am in charge, I now take my own power back.",
+    "I spend time with positive, energetic people.",
+    "The more peaceful I am inside, the more peace I have to share with others",
+    "I have the courage to live my dreams.",
+    "I release all negative thoughts of the past and all worries about the future.",
+    "My ability to conquer my challenges is limitless; my potential to succeed is infinite.",
+    "Right here, right now, I choose to honor my beauty, my strength and my unique way of being "
+  ]
+}

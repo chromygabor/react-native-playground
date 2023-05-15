@@ -4,9 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "json-server": "^0.17.3"
+    "json-server": "^0.17.3",
+    "lowdb": "^6.0.1"
   },
   "scripts": {
     "start": "json-server --watch ./db/db.json --port 4001 --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "@types/lowdb": "^1.0.11",
+    "ts-node": "^10.9.1"
   }
 }
